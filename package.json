@@ -1,0 +1,30 @@
+{
+  "name": "@nasa-gcn/eslint-config-gitignore",
+  "version": "0.0.0",
+  "description": "ESLint plugin to ignore files listed in .gitignore",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "contributors": [
+    {
+      "name": "Leo Singer",
+      "email": "leo.p.singer@nasa.gov"
+    }
+  ],
+  "engines": {
+    "node": "^14.17.0 || ^16.0.0 || >= 18.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7"
+  },
+  "license": "Apache-2.0",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.44.2"
+  }
+}
