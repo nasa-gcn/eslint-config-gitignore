@@ -1,6 +1,6 @@
 {
   "name": "@nasa-gcn/eslint-config-gitignore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ESLint plugin to ignore files listed in .gitignore",
   "repository": {
     "type": "git",
