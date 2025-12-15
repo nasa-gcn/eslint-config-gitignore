@@ -20,14 +20,14 @@ npm install @nasa-gcn/eslint-config-gitignore --save-dev
 
 ## Usage
 
-Add `gitignore` to the plugins section of your `.eslintrc` configuration file.
+Add to your [ESLint configuration file](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file) like this:
 
 ```json
-{
-    "extends": [
-        "@nasa-gcn/eslint-config-gitignore"
-    ]
-}
+// eslint.config.mjs
+import { defineConfig } from "eslint/config";
+import eslintConfigGitignore from "@nasa-gcn/eslint-config-gitignore";
+
+export default defineConfig(
+  eslintConfigGitignore,
+);
 ```
-
-
