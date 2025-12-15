@@ -1,17 +1,11 @@
-const { existsSync, readFileSync } = require('node:fs')
+// Adapted from https://eslint.org/docs/latest/use/configure/ignore#including-gitignore-files
+import { defineConfig } from 'eslint/config'
+import { includeIgnoreFile } from '@eslint/compat'
+import { cwd } from 'node:process'
+import { resolve } from 'node:path'
 
-/** @type {import('eslint').Linter.Config} */
-const config = {}
+const gitignorePath = resolve(cwd(), '.gitignore')
 
-const filename = '.gitignore'
-
-// Adapted from:
-// https://github.com/eslint/eslintrc/blob/v2.1.2/lib/config-array-factory.js#L153-L155
-// https://github.com/eslint/eslintrc/blob/v2.1.2/lib/config-array-factory.js#L278-L290
-if (existsSync(filename))
-  config.ignorePatterns = readFileSync('.gitignore', { encoding: 'utf-8' })
-    .replace(/^\ufeff/u, '')
-    .split(/\r?\n/gu)
-    .filter((line) => line.trim() !== '' && !line.startsWith('#'))
-
-module.exports = config
+export default defineConfig([
+  includeIgnoreFile(gitignorePath, 'Imported .gitignore patterns'),
+])
