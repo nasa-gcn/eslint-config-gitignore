@@ -24,10 +24,8 @@ Add to your [ESLint configuration file](https://eslint.org/docs/latest/use/confi
 
 ```js
 // eslint.config.mjs
-import { defineConfig } from "eslint/config";
-import eslintConfigGitignore from "@nasa-gcn/eslint-config-gitignore";
+import { defineConfig } from 'eslint/config'
+import eslintConfigGitignore from '@nasa-gcn/eslint-config-gitignore'
 
-export default defineConfig(
-  eslintConfigGitignore,
-);
+export default defineConfig(eslintConfigGitignore)
 ```
