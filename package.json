@@ -4,7 +4,7 @@
   "description": "ESLint plugin to ignore files listed in .gitignore",
   "repository": {
     "type": "git",
-    "url": "github:nasa-gcn/eslint-config-gitignore"
+    "url": "git+https://github.com/nasa-gcn/eslint-config-gitignore.git"
   },
   "keywords": [
     "eslint",
